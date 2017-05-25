@@ -1,0 +1,20 @@
+#!/bin/bash
+
+shuf $1 > ${1}_shuff
+file=${1}_shuff
+#cat $file
+line=1
+last_line=$(wc -l < "$file")
+echo $last_line
+while [ $line -le $last_line ]
+do
+	clear
+	echo ${line}":"
+	sed -n ${line}p $file
+	((line++))
+	read -p "Next?"
+done
+
+rm "$file"
+
+echo "Done."

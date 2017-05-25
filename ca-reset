@@ -1,0 +1,7 @@
+#! /bin/bash
+
+TODAY=`date +%F`
+touch $TODAY
+echo 0 > ~/Dropbox/cal/$TODAY
+CAL=`cat ~/Dropbox/cal/$TODAY`
+echo Today\'s calorie count reset to $CAL

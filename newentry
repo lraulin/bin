@@ -1,0 +1,4 @@
+#!/bin/bash
+
+name=`date '+%Y-%m-%d %H:%M:%S %Z'`
+vim ~/Dropbox/Documents/diary/$name

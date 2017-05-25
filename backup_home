@@ -1,0 +1,2 @@
+#!/bin/bash
+rsync -r -t -v --progress -l -s /home/lee/ /media/truecrypt1/lee

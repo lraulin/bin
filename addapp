@@ -1,0 +1,2 @@
+#!/bin/bash
+echo 'sudo apt-get install' $1 '-y' >> ~/bin/installmyapps

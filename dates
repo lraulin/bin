@@ -1,0 +1,24 @@
+#!/bin/bash
+# Print the number of days remaining until target date.
+
+TODAY=`date +%s`
+
+EVENT='Replace Meds'
+DATE=`date -d '28 August 2014' +%s`
+TIME=$[($DATE - $TODAY)]
+echo "$EVENT in `mycountdown $TIME`"
+
+EVENT='Next Payday'
+DATE=`date -d '10 Jun 2015' +%s`
+TIME=$[($DATE - $TODAY)]
+echo "$EVENT in `mycountdown $TIME`"
+
+EVENT='End of Contract'
+DATE=`date -d '1 June 2015' +%s`
+TIME=$[($DATE - $TODAY)]
+echo "$EVENT in `mycountdown $TIME`"
+
+EVENT='My Birthday'
+DATE=`date -d '18 July 2015' +%s`
+TIME=$[($DATE - $TODAY)]
+echo "$EVENT in `mycountdown $TIME`"

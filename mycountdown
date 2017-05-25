@@ -1,0 +1,81 @@
+#!/bin/bash
+
+# 1 year  = 31536000 s
+# 1 month =  2419200 s
+# 1 week  =   604800 s
+# 1 day   =    86400 s
+# 1 hour  =     3600 s
+
+total=$1
+
+years=$[$total / 31536000]
+total=$[$total % 31536000]
+
+months=$[$total / 2419200]
+total=$[$total % 2419200]
+
+weeks=$[$total / 604800]
+total=$[$total % 604800]
+
+days=$[$total / 86400]
+total=$[$total % 86400]
+
+hours=$[$total / 3600]
+total=$[$total % 3600]
+
+minutes=$[$total / 60]
+total=$[$total % 60]
+
+seconds=$total
+
+#echo
+
+if [ $years -gt 1 ]
+then
+    echo -n $years 'years '
+elif [ $years -eq 1 ]
+then
+    echo -n $years 'year '
+fi
+
+if [ $months -gt 1 ]
+then
+    echo -n $months 'months '
+elif [ $months -eq 1 ]
+then
+    echo -n $months 'month '
+fi
+
+if [ $weeks -gt 1 ]
+then
+    echo -n $weeks 'weeks '
+elif [ $weeks -eq 1 ]
+then
+    echo -n $weeks 'week '
+fi
+
+if [ $days -gt 1 ]
+then
+    echo -n $days 'days '
+elif [ $days -eq 1 ]
+then
+    echo -n $days 'day '
+fi
+
+# Print hours if less than a week remaining
+if [ $1 -lt $[60 * 60 * 24 * 7] ]
+then
+    echo -n $hours 'hours '
+fi
+
+# Print minutes if less than a day remaining
+if [ $1 -lt $[60 * 60 * 24] ]
+then
+    echo -n $minutes 'minutes '
+fi
+
+# Print total days if more than a week
+if [ $1 -gt $[60 * 60 * 24 * 7] ]
+then
+    echo -ne "($[$1 / 86400] days)"
+fi

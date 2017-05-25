@@ -1,0 +1,122 @@
+sudo apt-get install acetoneiso -y
+#sudo apt-get install alarm-clock-applet -y
+#sudo apt-get install alarm-clock -y
+sudo apt-get install auto-apt -y
+sudo apt-get install banshee banshee-extension-ubuntuonemusicstore banshee-extension-appindicator banshee-extension-lyrics banshee-extension-mirage -y
+sudo apt-get install blender -y
+sudo apt-get install bluefish -y
+sudo apt-get install bootchart -y
+sudo apt-get install build-essential checkinstall cdbs devscripts dh-make fakeroot libxml-parser-perl check avahi-daemon -y
+#sudo apt-get install calibre -y
+sudo apt-get install celestia -y
+sudo apt-get install cheese -y
+sudo apt-get install childsplay -y
+sudo apt-get install chmsee -y
+sudo apt-get install clamav clamtk -y
+sudo apt-get install cmatrix -y
+sudo apt-get install compizconfig-settings-manager -y
+#sudo apt-get install computertemp -y
+#sudo apt-get install controlaula -y
+#sudo apt-get install deluge-torrent -y
+sudo apt-get install dia -y
+sudo apt-get install dosbox -y
+#sudo apt-get install filelight -y
+sudo apt-get install filezilla -y
+sudo apt-get install freemind -y
+#sudo apt-get install fusion-icon -y
+sudo apt-get install gbrainy -y
+sudo apt-get install gcompris -y
+sudo apt-get install gdebi -y
+sudo apt-get install gedit-plugins -y
+sudo apt-get install gimp gimp-plugin-registry gimp-data-extras -y
+sudo apt-get install glipper -y
+sudo apt-get install glunarclock -y
+sudo apt-get install gnome-do -y
+sudo apt-get install gnome-shell -y
+#sudo apt-get install gnome-themes-extras -y
+#sudo apt-get install gnome-themes-more -y
+sudo apt-get install gnome-tweak-tool -y
+sudo apt-get install gnucap gcompris -y
+sudo apt-get install graphviz -y
+sudo apt-get install grsync -y
+sudo apt-get install gtk-chtheme -y
+sudo apt-get install guake -y
+sudo apt-get install ibus-hangul -y
+sudo apt-get install idle3 -y
+sudo apt-get install indicator-weather -y
+sudo apt-get install inkscape -y
+sudo apt-get install iotop -y
+#sudo apt-get install italc-client -y
+#sudo apt-get install italc-master -y
+#sudo apt-get install k3b libk3b6 -y
+#sudo apt-get install kdeedu -y
+sudo apt-get install keepassx -y
+sudo apt-get install kompozer nvu -y
+sudo apt-get install libdvdcss2 -y
+sudo apt-get install libdvdread4 -y
+sudo apt-get install libxine1-ffmpeg gxine mencoder mpeg2dec vorbis-tools id3v2 mpg321 mpg123 libflac++6 ffmpeg libmp4v2-0 totem-mozilla icedax tagtool easytag id3tool lame nautilus-script-audio-convert libmad0 libjpeg-progs libquicktime1 flac faac faad sox ffmpeg2theora libmpeg2-4 uudeview flac libmpeg3-1 mpeg3-utils mpegdemux liba52-0.7.4-dev -y
+sudo apt-get install liferea -y
+sudo apt-get install lo-menubar -y
+sudo apt-get install lsb-core -y
+sudo apt-get install lshw lshw-gtk -y
+#sudo apt-get install menu-xdg -y
+sudo apt-get install miro -y
+#sudo apt-get install multiget -y
+#sudo apt-get install nanny -y
+sudo apt-get install nautilus-actions -y
+sudo apt-get install nautilus-filename-repairer -y
+sudo apt-get install nautilus-gksu -y
+sudo apt-get install nautilus-image-converter -y
+sudo apt-get install nautilus-open-terminal -y
+sudo apt-get install nautilus-script-audio-convert lame flac faac faad mppenc -y
+sudo apt-get install nautilus-wallpaper -y
+sudo apt-get install netbeans -y
+sudo apt-get install ntfs-config ntfs-3g hal -y
+sudo apt-get install ntpdate -y
+sudo apt-get install ntp -y
+sudo apt-get install p7zip p7zip-rar p7zip-full cabextract unace -y
+#sudo apt-get install pidgin pidgin-data pidgin-lastfm pidgin-guifications msn-pecan pidgin-musictracker pidgin-plugin-pack pidgin-themes -y
+sudo apt-get install pinta -y
+sudo apt-get install python-gasp -y
+sudo apt-get install python-pyside -y
+sudo apt-get install quanta -y
+sudo apt-get install scribus -y
+sudo apt-get install scrot -y
+sudo apt-get install sensors-applet -y
+#sudo apt-get install sugar-emulator -y
+#sudo apt-get install sun-java6-jre sun-java6-plugin equivs -y
+sudo apt-get install synaptic -y
+sudo apt-get install sysinfo -y
+sudo apt-get install tipptrainer -y
+sudo apt-get install treeline -y
+sudo apt-get install tuxmath -y
+sudo apt-get install tuxpaint -y
+sudo apt-get install tuxtype -y
+sudo apt-get install typespeed -y
+sudo apt-get install ubuntu-edu-preschool -y
+sudo apt-get install ubuntu-edu-primary -y
+sudo apt-get install ubuntu-edu-secondary -y
+sudo apt-get install ubuntu-edu-tertiary -y
+sudo apt-get install ubuntu-restricted-extras -y
+sudo apt-get install ubuntustudio-icon-theme -y
+sudo apt-get install ubuntustudio-sounds -y
+sudo apt-get install ubuntustudio-theme -y
+#sudo apt-get install ubuntustudio-wallpapers -y
+sudo apt-get install unace rar unrar zip unzip p7zip-full p7zip-rar sharutils uudeview mpack lha arj cabextract file-roller -y
+sudo apt-get install vim-gnome -y
+sudo apt-get install vlc -y
+sudo apt-get install vuze -y
+sudo apt-get install wine -y
+#sudo apt-get install wmctrl -y
+#sudo apt-get install xscreensaver-data-extra -y
+#sudo apt-get install xscreensaver-gl-extra -y
+#sudo apt-get install xscreensaver-screensaver-bsod -y
+#sudo apt-get install  -y
+sudo apt-get install zim -y
+#sudo apt-get remove empathy-common -y
+#sudo apt-get remove empathy -y
+#sudo wget --output-document=/etc/apt/sources.list.d/medibuntu.list http://www.medibuntu.org/sources.list.d/$(lsb_release -cs).list && sudo apt-get --quiet update && sudo apt-get --yes --quiet --allow-unauthenticated install medibuntu-keyring && sudo apt-get --quiet update
+sudo apt-get install tasque -y
+sudo apt-get install rednotebook -y
+sudo apt-get install scribus-template -y
+sudo apt-get install icc-profiles -y

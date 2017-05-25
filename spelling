@@ -1,0 +1,6 @@
+#!/bin/sh
+
+cd
+cd LHY
+cd "Spelling Bee"
+shuffl Sapphire.txt

@@ -1,0 +1,4 @@
+#!/bin/bash
+# Input today's shoulder measurement to be added to log file.
+touch ~/Dropbox/logs/shoulders.txt
+echo `date +%F` $1 >> ~/Dropbox/logs/shoulders.txt

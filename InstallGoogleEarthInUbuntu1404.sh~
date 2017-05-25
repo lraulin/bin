@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Installs Google Earth.
+# Meant for Ubuntu 14.04 64bit.
+
+wget  http://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
+sudo dpkg -i google-earth-stable_current_amd64.deb
+sudo apt-get -f install
+rm google-earth-stable_current_amd64.deb
+sudo apt-get install msttcorefonts

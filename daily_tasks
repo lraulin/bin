@@ -1,0 +1,5 @@
+#!/bin/bash
+# 0 0 * * * ~/bin/cron/dailytasks
+
+todo.sh add '(F) Kegels'
+todo.sh add '(F) Daily journal entry'

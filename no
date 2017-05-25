@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Define file location.
+file=~/notes
+
+echo >> $file
+date >> $file
+echo $1 >> $file
+cat $file

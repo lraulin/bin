@@ -1,0 +1,39 @@
+#!/bin/bash
+
+echo
+echo '-------------------------------'
+dates
+echo
+
+CONTEXT='@home'
+echo "<<< $CONTEXT >>>"
+todo.sh -@ ls $CONTEXT
+echo
+
+CONTEXT='@computer'
+echo "<<< $CONTEXT >>>"
+todo.sh -@ ls $CONTEXT
+echo
+
+CONTEXT='@work'
+echo "<<< $CONTEXT >>>"
+todo.sh -@ ls $CONTEXT
+echo
+
+CONTEXT='@errands'
+echo "<<< $CONTEXT >>>"
+todo.sh -@ ls $CONTEXT
+echo
+
+CONTEXT='@shopping'
+echo "<<< $CONTEXT >>>"
+todo.sh -@ ls $CONTEXT
+echo
+
+CONTEXT='@waiting'
+echo "::: Waiting For :::"
+todo.sh -@ ls $CONTEXT
+echo
+
+echo '|||' "PROJECTS" '|||'
+todo.sh lsprj

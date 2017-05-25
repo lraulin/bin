@@ -1,0 +1,10 @@
+#!/bin/bash
+# Simple script to create a new shell script from a template and open it in Vim.
+
+if [ -f $1 ]
+then
+    echo yes
+    touch $1
+else
+    echo no
+fi

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+uname -a
+uname -r
+uptime
+hostname
+hostname -i
+last reboot
+date
+cal
+w
+whoami
+finger user
+dmesg
+cat /proc/cpuinfo
+cat /proc/meminfo
+cat /proc/interrupts
+lshw
+lsblk
+free -m
+lspci -tv
+lsub -tv
+dmidecode
+

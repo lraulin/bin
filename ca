@@ -1,0 +1,16 @@
+#! /bin/bash
+
+TODAY=`date +%F`
+touch ~/Dropbox/cal/$TODAY
+OLDTOTAL=`cat ~/Dropbox/cal/$TODAY`
+
+if test $1
+then
+    ADDCAL=$1
+else
+    ADDCAL=0
+fi
+
+NEWTOTAL=$[$OLDTOTAL + $ADDCAL]
+echo $NEWTOTAL > ~/Dropbox/cal/$TODAY
+echo 'Total calories today:' $NEWTOTAL

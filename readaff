@@ -1,0 +1,20 @@
+#!/bin/bash
+# Read a file one line at a time;
+# Don't display the next line until user presses enter.
+counter=$(wc -l < $1 )
+line=1
+
+while [ $line -le $counter ]
+do
+    clear
+    echo
+    echo
+    sed -n "$line"p $1
+    line=$[$line + 1]
+    echo
+    echo
+    echo
+    echo
+    echo
+    read
+done

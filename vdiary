@@ -1,0 +1,23 @@
+#!/bin/bash
+# A simple script to use a diary with vim.
+
+TODAY=`date +%F`
+ENTRY=~/Dropbox/Documents/vdiary/$TODAY
+
+if [ ! -d ~/Dropbox/Documents/vdiary ]
+then
+    mkdir ~/Dropbox/Documents/vdiary
+fi
+
+if [ ! -f $ENTRY ]
+then
+    touch $ENTRY
+    echo `date +'%A, %d %B %Y'` >> $ENTRY
+    echo >> $ENTRY
+    echo `date +'%r %Z'` >> $ENTRY
+    vim $ENTRY
+else
+    echo
+    echo `date +'%r %Z'` >> $ENTRY
+    vim $ENTRY
+fi

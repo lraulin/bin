@@ -1,0 +1,3 @@
+#!/bin/bash
+# Input today's waist measurement to be added to log file.
+echo `date +%F` $1 >> ~/Dropbox/logs/waist.txt

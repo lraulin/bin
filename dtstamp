@@ -1,0 +1,5 @@
+#!/bin/bash
+date '+%Y-%m-%d %H:%M:%S %Z'
+# Requires package xclip.
+date '+%Y-%m-%d %H:%M:%S %Z' | xclip
+echo 'Copied to clipboard.'

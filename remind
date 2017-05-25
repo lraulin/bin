@@ -1,0 +1,3 @@
+#!/bin/bash
+echo '*** Reminders ***'
+cat /home/lee/Dropbox/todo/reminders.txt

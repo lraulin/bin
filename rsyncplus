@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Backup my Home directory by syncing it to my Plusmate external hard drive.
+
+rsync -r -t -v --progress --delete -u -s /home/lee /media/lee/Plusmate

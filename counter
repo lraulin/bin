@@ -1,0 +1,4 @@
+#!/bin/bash
+
+counter=$(wc -l < $1 )
+echo $counter

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+todo.sh add '(A) Clean room @work'
+todo.sh add '(A) Write and print daily plan @work'

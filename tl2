@@ -1,0 +1,7 @@
+#!/bin/bash
+clear
+dates
+echo '*** Actions ***'
+todo.sh ls
+echo '*** Projects ***'
+todo.sh lsprj

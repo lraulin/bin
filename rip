@@ -1,0 +1,41 @@
+#!/bin/bash
+
+#!/bin/bash
+
+# DVD Audio ripping script originally created
+# by supertux from the Ubuntu forums:
+# http://ubuntuforums.org/showpost.php?p=4251034&postcount=12
+# Modified by NTolerance to list DVD information,
+# accept command line arguments, and output 256kbit MP3 files.
+# Modified by strangeattractor to pad zeros in the file name
+# and to use tcaud instead of raw for exporting
+# Requires installation of transcode, lsdvd, and lame packages from the
+# Ubuntu repositories and probably other packages related to DVD
+# decryption and playback.
+# usage: dvd-audio-rip.sh [Title] [TotalTracks]
+# example: dvd-audio-rip.sh 04 06
+# Running without Title or TotalTracks arguments will
+# display DVD track information.
+
+case "$1" in
+
+"") echo "DVD Title and Track Information:"
+echo
+lsdvd -v /home/lee/virtual-drives/2 | grep 'Length:' | cut -d, -f1,2
+echo
+echo "usage: dvd-audio-rip.sh [Title] [TotalTracks]"
+echo "example: dvd-audio-rip.sh 04 06"
+exit $E_PARAM
+;;
+
+*) export title=$1
+export totaltracks=$2
+export src=/media/cdrom0
+export tracks=1
+until [ $tracks -gt $totaltracks ]; do
+transcode -i $src -x dvd,dvd -T $title,$tracks,1 -a 0 -y null,tcaud -b 256 -m `printf "%02d" $title`-track-`printf "%03d" $tracks`.mp3
+let tracks+=1
+done
+;;
+
+esac
