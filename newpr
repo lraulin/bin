@@ -4,10 +4,10 @@ if [ $# -eq 0 ]
     then
         echo "Call script with an argument to name your new project."
         exit 1
-fi    
+fi
 
 mkdir $1
-touch $1/index.html $1/index.css $1/index.js
+touch $1/index.html $1/main.css $1/main.js
 cat > $1/index.html << EOF
 <!DOCTYPE html>
 <html>
@@ -21,18 +21,18 @@ cat > $1/index.html << EOF
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="index.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
 EOF
 
-cat > $1/index.js << EOF
-$(document).ready(function() {
+cat > $1/main.js << EOF
+\$(document).ready(function() {
 
 
 });

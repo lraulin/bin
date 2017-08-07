@@ -1,0 +1,9 @@
+#!/bin/bash
+# Shortcut for Wikipedia search from command line.
+
+search=""
+echo "Searching Wikipedia: $@"
+for term in $@; do
+    search="$search%20$term"
+done
+xdg-open "https://en.wikipedia.org/wiki/?search=$search"

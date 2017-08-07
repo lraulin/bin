@@ -1,2 +1,7 @@
 #!/bin/bash
-echo `date '+%Y-%m-%d %H:%M:%S %Z %a'` '   ' $1 >> ~/Dropbox/logs/diary.txt
+
+EDITOR=mousepad
+
+TODAY=$(date '+%Y-%m-%d')
+
+$EDITOR ~/Dropbox/docs/diary/${TODAY}.txt
