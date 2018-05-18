@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# sa for "save alias"
+# Quickly add new new alias permanently
+# assumes ~/.aliases file sourced by ~/.zshrc
+
+# usage: sa new 'command -xyz'
+# appends  alias new='command -xyz' to ~/.aliases and sources zshrc
+
+echo alias $1=$2 >> ~/.aliases
+source ~/.zshrc

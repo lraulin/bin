@@ -1,0 +1,5 @@
+#!/bin/bash
+
+killall skypeforlinux
+killall dropbox
+killall caja-dropbox
