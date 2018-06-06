@@ -1,11 +1,58 @@
-#!/bin/bash
+#!/usr/bin/env python3
+"""Quickly add a new alias permanently in bash or zsh or other compatible 
+shell.
 
-# sa for "save alias"
-# Quickly add new new alias permanently
-# assumes ~/.aliases file sourced by ~/.zshrc
+Usage: sa foo bar baz bolt
+Appends  alias foo='bar baz bolt' so you can type type foo instead of bar baz 
+bolt. You don't need to use quotes, as they will be added. Unless the command 
+you are using contain special characters, in which case you should put the 
+command in quotes. Extra quotes won't be added.
+"""
+# I call the script sa, short for 'save alias'. Normally cryptic names should
+# avoided, but a script for creating short aliases should already have a short
+# alias!
 
-# usage: sa new 'command -xyz'
-# appends  alias new='command -xyz' to ~/.aliases and sources zshrc
+from os import environ, system, path
+from sys import argv
 
-echo alias $1=$2 >> ~/.aliases
-source ~/.zshrc
+shell = environ["SHELL"]
+
+if shell == '/bin/zsh':
+    rcfile = path.expanduser('~/.zshrc')
+elif shell == '/bin/bash':
+    rcfile = path.expanduser('~/.bashrc')
+else:
+    print(f'Shell {rc} not supported. But you could probably fix it!')
+    exit()
+
+# construct line to append to file
+alias_name = argv[1]
+alias_command = ' '.join(argv[2:])
+# if there are quotes, remove them so we don't get extra quotes
+if (alias_command[0] == '"' and alias_command [-1] == '"') or (alias_command[0] == "'" and alias_command [-1] == "'"):
+    alias_command = alias_command[1:-1]
+newalias = f"alias {alias_name}='{alias_command}'"
+
+# if you don't have an .aliases file, it will use .bashrc or .zshrc instead.
+# there are two variables just to make it easier to tell you which file
+# it added to
+aliasfile = path.expanduser('~/.aliases')
+
+try:
+    with open(aliasfile, 'a') as f:
+        f.write(newalias)
+except FileNotFoundError:
+    aliasfile = rcfile
+    with open(aliasfile, 'a') as f:
+        f.write(newalias)
+
+print(f'"{newalias}" added to {aliasfile}')
+
+
+# source the file so you can use the new alias without having to restart
+# your shell
+
+# system(f'source {aliasfile}')
+
+# this doesn't work. You'll have to do it manually for now. But you can
+# make an alias for it!
