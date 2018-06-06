@@ -31,7 +31,7 @@ alias_command = ' '.join(argv[2:])
 # if there are quotes, remove them so we don't get extra quotes
 if (alias_command[0] == '"' and alias_command [-1] == '"') or (alias_command[0] == "'" and alias_command [-1] == "'"):
     alias_command = alias_command[1:-1]
-newalias = f"alias {alias_name}='{alias_command}'"
+newalias = f"alias {alias_name}='{alias_command}'\n"
 
 # if you don't have an .aliases file, it will use .bashrc or .zshrc instead.
 # there are two variables just to make it easier to tell you which file
