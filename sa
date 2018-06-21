@@ -55,4 +55,5 @@ print(f'"{newalias}" added to {aliasfile}')
 # system(f'source {aliasfile}')
 
 # this doesn't work. You'll have to do it manually for now. But you can
-# make an alias for it!
+# make an alias for it! I use 'sou' for 'source ~/.zshrc' or 'soa' for 
+# 'source ~/.aliases'
